@@ -1,5 +1,6 @@
 import React from "react";
 import DateTime from "./DateTime";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
     return (
@@ -15,11 +16,10 @@ export default function WeatherInfo(props) {
             </ul>
             <div className="row">
                 <div className="col-md-6">
-                    <img
-                    src="http://openweathermap.org/img/wn/10d${icon}@2x.png"
-                    alt={props.data.description}
-                    />
-                    {props.data.temperature}<span className="Weather__secondary-list--units">C</span>
+                    <div className="float-left">
+                        <WeatherIcon code={props.data.icon} alt={props.data.description} />
+                        {props.data.temperature}<span className="Weather__secondary-list--units">C</span>
+                    </div>
                 </div>
                 <div className="col-md-6">
                     <ul className="Weather__secondary-list">
