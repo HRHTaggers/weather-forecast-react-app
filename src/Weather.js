@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import axios from "axios";
+import DateTime from "./DateTime";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Weather.css";
@@ -17,7 +18,7 @@ export default function Weather(props) {
             description: response.data.weather[0].description,
             icon: response.data.weather[0].icon,
             city: response.data.name,
-            date: "Wednesday"
+            date: new Date (response.data.dt * 1000)
         });
     }
     
@@ -43,10 +44,10 @@ export default function Weather(props) {
                     </div>
                 </div>
             </form>
-            <h1>{weatherData.city}</h1>
-            <ul>
+            <h1 className="Weather__title">Current weather: <strong>{weatherData.city}</strong></h1>
+            <ul className="Weather__primary-list">
                 <li>
-                    {weatherData.date}
+                    <DateTime date={weatherData.date} />
                 </li>
                 <li className="text-capitalize">
                     {weatherData.description}
@@ -58,18 +59,18 @@ export default function Weather(props) {
                     src="http://openweathermap.org/img/wn/10d${icon}@2x.png"
                     alt={weatherData.description}
                     />
-                    {weatherData.temperature}C
+                    {weatherData.temperature}<span className="Weather__secondary-list--units">C</span>
                 </div>
                 <div className="col-md-6">
-                    <ul>
+                    <ul className="Weather__secondary-list">
                         <li>
                             Precipitation: 15%
                         </li>
                         <li>
-                            Humidity: {weatherData.humidity}
+                            Humidity: {weatherData.humidity}<span className="Weather__secondary-list--units">%</span>
                         </li>
                         <li>
-                            Windspeed: {weatherData.windspeed}
+                            Windspeed: {weatherData.windspeed}<span className="Weather__secondary-list--units">km/ph</span>
                         </li>
                     </ul>
                 </div>

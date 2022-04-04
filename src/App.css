@@ -6,10 +6,26 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(../public/img/Day-background.png);
+  background-size: cover;
+  background-position: center;
+  color: aliceblue;
 }
 
 footer {
   margin: 1rem;
   text-align: center;
   font-size: 0.75rem;
+}
+
+.App {
+  margin: 5%;
+  padding: 2%;
+  border-radius: 0.25rem;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.App__title {
+  padding: 0% 0% 1% 0%;
+  font-size: 2rem;
 }

@@ -1,3 +1,14 @@
-.Weather {
-    border: 1px solid grey;
+.Weather__title {
+    padding: 1% 0% 1% 0%;
+    font-size: 2rem;
+}
+
+.Weather__primary-list,
+.Weather__secondary-list {
+    padding: 0%;
+    list-style: none;
+}
+
+.Weather__secondary-list--units {
+    font-size: 0.5rem;
 }
