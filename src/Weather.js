@@ -67,6 +67,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return <h6>Loading..."</h6>;
+    return (<h6>Loading..."</h6>);
   }
 }
