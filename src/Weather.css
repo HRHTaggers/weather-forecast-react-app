@@ -1,14 +1,82 @@
 .Weather__title {
-    padding: 1% 0% 1% 0%;
+  padding: 1% 0% 1% 0%;
+  font-size: 2rem;
+}
+
+.Weather__primary-list {
+  padding: 0%;
+  list-style: none;
+}
+
+.Weather__primary-list--units {
+  font-size: 0.5rem;
+}
+
+.Weather__form--input {
+  margin-bottom: 1rem;
+  padding: 1% 3%;
+  font-size: 1rem;
+  transition: 200ms all ease-in-out;
+  border: none;
+  border-color: transparent;
+  border-radius: 0.25rem;
+}
+
+.Weather__form--input:hover {
+  box-shadow: 0 0 5px 1px aliceblue;
+  cursor: pointer;
+}
+
+.Weather__form--button {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding: 1% 3%;
+  font-size: 1rem;
+  transition: 200ms all ease-in-out;
+  border: none;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  background-color: rgb(90, 188, 237);
+  color: aliceblue;
+}
+
+.Weather__form--button:hover {
+  box-shadow: 0 0 5px 1px aliceblue;
+  background-color: rgb(65, 137, 173);
+  cursor: pointer;
+}
+
+.WeatherTemperature__Main {
+    font-size: 4rem;
+}
+
+.WeatherTemperature__Unit {
+    position: relative;
+    top: -2rem;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+.Weather__primary-list--date {
+    font-size: 1rem;
+    margin-bottom: 2%;
+}
+
+.Weather__primary-list--description {
     font-size: 2rem;
+    margin-bottom: 7%;
 }
 
-.Weather__primary-list,
-.Weather__secondary-list {
-    padding: 0%;
-    list-style: none;
+.Weather__primary-list--humidity {
+    font-size: 1.25rem;
 }
 
-.Weather__secondary-list--units {
-    font-size: 0.5rem;
+.Weather__primary-list--windspeed {
+    font-size: 1.25rem;
+}
+
+.Weather__Icon {
+    align-content: center;
 }

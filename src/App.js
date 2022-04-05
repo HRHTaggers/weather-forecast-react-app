@@ -8,7 +8,15 @@ export default function App() {
       <h1 className="App__title">Weather App</h1>
       <Weather defaultCity="London" />
       <footer className="footer">
-        Coded by H R Tagliarini, open-sourced on Github and hosted on Netlify.
+        Coded by H R Tagliarini, open-sourced on
+        <a
+          href="https://github.com/HRHTaggers/weather-forecast-react-app"
+          className="footer--GitHub-reference"
+        >
+          {" "}
+          Github
+        </a>{" "}
+        and hosted on Netlify.
       </footer>
     </div>
   );

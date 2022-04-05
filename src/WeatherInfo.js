@@ -9,28 +9,37 @@ export default function WeatherInfo(props) {
       <h1 className="Weather__title">
         Current weather: <strong>{props.data.city}</strong>
       </h1>
-      <ul className="Weather__primary-list">
-        <li>
-          <DateTime date={props.data.date} />
-        </li>
-        <li className="text-capitalize">{props.data.description}</li>
-      </ul>
       <div className="row">
         <div className="col-md-6">
-          <div className="float-left">
-            <WeatherIcon code={props.data.icon} alt={props.data.description} />
-            <WeatherTemperature celsius={props.data.temperature} />
+          <div className="clearfix">
+            <div className="WeatherInfo__Main-Reading">
+              <WeatherIcon
+                className="Weather__Icon"
+                code={props.data.icon}
+                alt={props.data.description}
+              />
+              <WeatherTemperature celsius={props.data.temperature} />
+            </div>
           </div>
         </div>
         <div className="col-md-6">
-          <ul className="Weather__secondary-list">
+          <ul className="Weather__primary-list">
             <li>
-              Humidity: {props.data.humidity}
-              <span className="Weather__secondary-list--units">%</span>
+              <DateTime
+                date={props.data.date}
+                className="Weather__primary-list--date"
+              />
             </li>
-            <li>
+            <li className="Weather__primary-list--description text-capitalize">
+              {props.data.description}
+            </li>
+            <li className="Weather__primary-list--humidity">
+              Humidity: {props.data.humidity}
+              <span className="Weather__primary-list--units">%</span>
+            </li>
+            <li className="Weather__primary-list--windspeed">
               Windspeed: {props.data.windspeed}
-              <span className="Weather__secondary-list--units">km/ph</span>
+              <span className="Weather__primary-list--units">km/ph</span>
             </li>
           </ul>
         </div>

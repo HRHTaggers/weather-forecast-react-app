@@ -19,8 +19,8 @@ footer {
 }
 
 .App {
-  margin: 5%;
-  padding: 2%;
+  margin: 5% 20%;
+  padding: 5%;
   border-radius: 0.25rem;
   background-color: rgba(0,0,0,0.2);
 }
@@ -28,4 +28,10 @@ footer {
 .App__title {
   padding: 0% 0% 1% 0%;
   font-size: 2rem;
+}
+
+.footer--GitHub-reference {
+  text-decoration: none;
+  color: rgb(90, 188, 237);
+  cursor: pointer;
 }
