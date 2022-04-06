@@ -36,11 +36,11 @@ export default function WeatherInfo(props) {
             </li>
             <li className="Weather__primary-list--humidity">
               Humidity: {props.data.humidity}
-              <span className="Weather__primary-list--units">%</span>
+              <span className="Weather__primary-list--units">{" "}%</span>
             </li>
             <li className="Weather__primary-list--windspeed">
               Windspeed: {props.data.windspeed}
-              <span className="Weather__primary-list--units">km/ph</span>
+              <span className="Weather__primary-list--units">{" "}km/ph</span>
             </li>
           </ul>
         </div>

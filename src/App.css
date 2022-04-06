@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
@@ -13,13 +14,13 @@ body {
 }
 
 footer {
-  margin: 1rem;
+  margin: 0;
   text-align: center;
   font-size: 0.75rem;
 }
 
-.App {
-  margin: 5% 20%;
+.App__Background {
+  margin: 5% 20% 2% 20%;
   padding: 3% 5%;
   border-radius: 0.25rem;
   background-color: rgba(0,0,0,0.2);
@@ -30,8 +31,24 @@ footer {
   font-size: 2rem;
 }
 
-.footer--GitHub-reference {
+.App__footer--link {
   text-decoration: none;
-  color: rgb(90, 188, 237);
+  color: #1086BE;
   cursor: pointer;
+}
+
+.App__footer--logo {
+  transition: 500ms all ease-in-out;
+  margin: 0% 0% 10% 0%;
+}
+
+.App__footer--logo:hover {
+  transform: rotateY(360deg);
+}
+
+@media (max-width: 800px) {
+  .App__Background {
+    margin: 10% 5% 2% 5%;
+    text-align: center;
+  }
 }
