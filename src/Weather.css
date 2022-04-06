@@ -80,3 +80,8 @@
 .Weather__Icon {
     align-content: center;
 }
+
+.weatherForecast {
+    display: block;
+    justify-content: center;
+}
