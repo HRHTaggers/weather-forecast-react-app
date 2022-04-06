@@ -10,20 +10,20 @@ export default function WeatherInfo(props) {
         Current weather: <strong>{props.data.city}</strong>
       </h1>
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-2">
           <div className="clearfix">
             <div className="WeatherInfo__Main-Reading">
               <WeatherIcon
                 className="Weather__Icon"
                 code={props.data.icon}
                 alt={props.data.description}
-                size={72}
+                size={80}
               />
               <WeatherTemperature celsius={props.data.temperature} />
             </div>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-8">
           <ul className="Weather__primary-list">
             <li>
               <DateTime

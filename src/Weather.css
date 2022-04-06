@@ -85,3 +85,7 @@
     display: block;
     justify-content: center;
 }
+
+.WeatherForecast__Day {
+    margin: 1% 0% 2% 0%;
+}
